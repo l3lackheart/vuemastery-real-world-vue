@@ -11,14 +11,15 @@ const routes = [
     component: EventList
   },
   {
-    path: '/:eventId',
-    name: 'event-show',
-    component: () => import('../views/EventShow.vue')
-  },
-  {
     path: '/create',
     name: 'event-create',
     component: () => import('../views/EventCreate.vue')
+  },
+  {
+    path: '/:eventId',
+    name: 'event-show',
+    component: () => import('../views/EventShow.vue'),
+    props: true
   }
 ]
 
